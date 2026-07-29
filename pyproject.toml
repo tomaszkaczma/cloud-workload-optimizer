@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloud-workload-optimizer"
+version = "1.0.0"
+description = "Reproducible Bayesian optimisation of synthetic cloud workload configurations"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Tomasz Kaczmarski" }]
+keywords = [
+  "bayesian-optimisation",
+  "big-data",
+  "cloud-computing",
+  "data-engineering",
+  "gaussian-process",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "matplotlib>=3.7,<3.11",
+  "numpy>=1.24,<2.3",
+  "scikit-learn>=1.3,<1.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2,<2",
+  "mypy>=1.10,<2",
+  "ruff>=0.6,<1",
+]
+
+[project.scripts]
+cloud-workload-optimizer = "cloud_workload_optimizer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tomaszkaczma/Big-Data-Coursework"
+Repository = "https://github.com/tomaszkaczma/Big-Data-Coursework"
+Issues = "https://github.com/tomaszkaczma/Big-Data-Coursework/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+packages = ["cloud_workload_optimizer"]
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true

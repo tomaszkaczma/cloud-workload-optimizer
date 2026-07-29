@@ -1,22 +1,22 @@
+# Byte-compiled files and caches
 __pycache__/
 *.py[cod]
 *.egg-info/
-build/
-dist/
 .pytest_cache/
+.mypy_cache/
 .ruff_cache/
-.coverage
-htmlcov/
+
+# Environments and builds
 .venv/
 venv/
+build/
+dist/
+
+# Editors and operating systems
 .idea/
 .vscode/
-.ipynb_checkpoints/
-
-data/raw/*
-!data/raw/.gitkeep
-artifacts/*
-!artifacts/.gitkeep
-
 .DS_Store
 Thumbs.db
+
+# Local experiment outputs; the documented baseline is committed intentionally
+results/local-*/

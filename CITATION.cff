@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this educational project, please cite it as follows."
+title: "Big Data Workload Optimisation"
+type: software
+authors:
+  - family-names: "Kaczmarski"
+    given-names: "Tomasz"
+repository-code: "https://github.com/tomaszkaczma/Big-Data-Coursework"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-29

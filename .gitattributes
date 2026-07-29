@@ -1,22 +1,13 @@
 * text=auto eol=lf
 
 *.py text diff=python
-*.m text
-*.md text
+*.md text diff=markdown
 *.toml text
-*.yml text
 *.yaml text
+*.yml text
 *.json text
 *.csv text
-*.cff text
-*.ipynb text
-*.lock text
-LICENSE text
+*.svg text
 
-*.png binary
-*.jpg binary
-*.jpeg binary
 *.pdf binary
-*.docx binary
-*.zip binary
-*.joblib binary
+*.png binary
