@@ -1,0 +1,22 @@
+* text=auto eol=lf
+
+*.py text diff=python
+*.m text
+*.md text
+*.toml text
+*.yml text
+*.yaml text
+*.json text
+*.csv text
+*.cff text
+*.ipynb text
+*.lock text
+LICENSE text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.docx binary
+*.zip binary
+*.joblib binary
